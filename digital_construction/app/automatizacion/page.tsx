@@ -1,0 +1,46 @@
+import { ContactSection, IntroHighlights, LogosMarquee, SiteHeader } from "../components/site-sections";
+
+export default function AutomatizacionPage() {
+  return (
+    <main className="w-full pt-[132px]">
+      <section className="bg-background px-[clamp(20px,6vw,72px)] py-10 min-h-[360px]">
+        <SiteHeader />
+
+        <div className="flex justify-start w-[min(100%,980px)] mx-auto p-[32px_0_24px]">
+          <div className="w-[min(100%,980px)]">
+            <p className="m-0 mb-3.5 text-text-secondary text-[0.95rem] font-bold tracking-[0.08em]">DIGITAL CONSTRUCTION</p>
+            <h1 className="m-0 text-title font-display text-[clamp(2.6rem,6vw,4.6rem)] leading-[0.95]">
+              AUTOMATIZACION
+              <span className="block mt-2 text-[0.7em] text-text font-medium">para tu operacion</span>
+            </h1>
+            <p className="max-w-[30ch] mt-6 mb-0 text-text-secondary text-[1.2rem] max-[640px]:text-[1rem] leading-[1.4]">
+              Disenamos flujos y procesos automatizados para reducir tareas
+              manuales, acelerar tiempos de respuesta y aumentar productividad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-background-2 px-[clamp(20px,6vw,72px)] py-10">
+        <LogosMarquee />
+
+        <div className="w-[min(100%,980px)] mx-auto">
+          <div className="max-w-[720px]">
+            <IntroHighlights
+              title="Dinos que proceso quieres optimizar y construimos una automatizacion hecha a tu medida."
+              items={[
+                "FLUJOS OPERATIVOS",
+                "AUTOMATIZACION DE TAREAS REPETITIVAS",
+                "INTEGRACION ENTRE HERRAMIENTAS Y EQUIPOS",
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-background px-[clamp(20px,6vw,72px)] py-10" id="contacto">
+        <ContactSection title="COTIZA TU AUTOMATIZACION" />
+      </section>
+    </main>
+  );
+}

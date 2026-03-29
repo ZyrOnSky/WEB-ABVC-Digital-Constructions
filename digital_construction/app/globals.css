@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --background-2: #312f2f;
+  --title: #3b82f6;
+  --text: #f3f3f3;
+  --text-secondary: #c4c4c4;
+  --line: rgba(243, 243, 243, 0.78);
+  --line-soft: rgba(243, 243, 243, 0.3);
+  --button: #3b82f6;
+  --button-hover: #2f6ede;
+  --font-body: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-display: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-2: var(--background-2);
+  --color-title: var(--title);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-button: var(--button);
+  --color-button-hover: var(--button-hover);
+  --font-body: var(--font-body);
+  --font-display: var(--font-display);
+  --animate-marquee-scroll: marquee-scroll 18s linear infinite;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 140px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+
+/* Custom styles not easily replaced by standard Tailwind utilities or requiring specific behavior */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 12px));
+  }
+}
